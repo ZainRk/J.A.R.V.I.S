@@ -53,7 +53,7 @@ def listen():
         return r.recognize_google(audio)
     except sr.UnknownValueError:
         speak(
-            "I couldn't understand what you said! Would you like to repeat?")
+            "Sorry, I couldn't understand what you said! Would you like repeat it more clearly?")
         return(listen())
     except sr.RequestError as e:
         print("Could not request results from " +
